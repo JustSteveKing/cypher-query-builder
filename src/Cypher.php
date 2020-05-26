@@ -151,6 +151,20 @@ class Cypher
     }
 
     /**
+     * Create a return clause
+     *
+     * @param string $variable
+     * @param string $attribtute
+     * @return $this
+     */
+    public function return(string $variable, string $attribtute = '') : self
+    {
+        $this->returnClause->return($variable, $attribute);
+
+        return $this;
+    }
+
+    /**
      * An easy to run short cut to return a cypher query string
      *
      * @return string
